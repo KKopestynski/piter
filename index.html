@@ -52,15 +52,17 @@
         transition: opacity 0.5s ease-in-out;
       }
 
-      .pdf-container:hover img {
+      .pdf-container.clicked img {
         opacity: 1;
       }
+
       .blinking-text {
         font-size: 20px;
         font-weight: bold;
         color: purple;
         animation: blink 0.5s infinite alternate;
       }
+
       @keyframes blink {
         from {
           opacity: 1;
@@ -157,6 +159,17 @@
           top: 0;
         }
       }
+      .gif-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .gif-container img {
+        margin: 10px;
+        border-radius: 10px;
+      }
       @media (max-width: 600px) {
         body {
           background: pink;
@@ -184,34 +197,43 @@
       </div>
     </div>
     <marquee direction="right">!!! Do zobaczenia za rok!!!</marquee>
-    <img
-      class="moving-image"
-      src="https://media.giphy.com/media/l41lH2JniD8tVOhK4/giphy.gif"
-      width="100"
-      alt="Dancing GIF"
-    />
-    <img
-      class="bouncing-image"
-      src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif"
-      width="100"
-      alt="Bouncing GIF"
-    />
-    <img
-      class="diagonal-move"
-      src="https://media.giphy.com/media/fAnEC88LccN7a/giphy.gif"
-      width="100"
-      alt="Diagonal Moving GIF"
-    />
-    <img
-      class="vertical-move"
-      src="https://media.giphy.com/media/3o6nV38HVyFQgCwLlG/giphy.gif"
-      width="100"
-      alt="Vertical Moving GIF"
-    />
+    <div class="gif-container">
+      <img
+        class="moving-image"
+        src="https://media.giphy.com/media/l41lH2JniD8tVOhK4/giphy.gif"
+        width="150"
+        alt="Dancing GIF"
+      />
+      <img
+        class="bouncing-image"
+        src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif"
+        width="150"
+        alt="Bouncing GIF"
+      />
+      <img
+        class="diagonal-move"
+        src="https://media.giphy.com/media/fAnEC88LccN7a/giphy.gif"
+        width="150"
+        alt="Diagonal Moving GIF"
+      />
+      <img
+        class="vertical-move"
+        src="https://media.giphy.com/media/3o6nV38HVyFQgCwLlG/giphy.gif"
+        width="200"
+        alt="Vertical Moving GIF"
+      />
+      <img
+        class="moving-image"
+        src="https://media.giphy.com/media/3o7qDRclnmlRmfTmHq/giphy.gif"
+        width="100"
+        alt="Another Moving GIF"
+      />
+    </div>
     <script>
       function showVoucher() {
         document.querySelector(".click-text").style.opacity = "0";
         document.querySelector(".voucher-img").style.opacity = "1";
+        document.querySelector(".pdf-container").classList.add("clicked");
       }
     </script>
   </body>
