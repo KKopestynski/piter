@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Urodziny Pitera</title>
+    <style>
+        body {
+            background: url('https://www.toptal.com/designers/subtlepatterns/patterns/dark_embroidery.png');
+            color: #00FF00;
+            font-family: Comic Sans MS, cursive, sans-serif;
+            text-align: center;
+        }
+        marquee {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+            background: yellow;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            border: 5px dashed magenta;
+            padding: 20px;
+            background: cyan;
+        }
+        .pdf-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            border: 10px groove lime;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Gift_box_icon.svg/512px-Gift_box_icon.svg.png') center/contain no-repeat;
+        }
+        .pdf-container iframe {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .pdf-container:hover iframe {
+            opacity: 1;
+        }
+        .blinking-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: purple;
+            animation: blink 0.5s infinite alternate;
+        }
+        @keyframes blink {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        .moving-image {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            animation: moveAround 5s linear infinite;
+        }
+        @keyframes moveAround {
+            0% { left: 0; }
+            50% { left: 80%; }
+            100% { left: 0; }
+        }
+        .rotating-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: orange;
+            display: inline-block;
+            animation: rotateText 3s linear infinite;
+        }
+        @keyframes rotateText {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .bouncing-image {
+            position: relative;
+            animation: bounce 2s infinite alternate;
+        }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-20px); }
+        }
+        .diagonal-move {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            animation: moveDiagonal 5s linear infinite;
+        }
+        @keyframes moveDiagonal {
+            0% { top: 100px; left: 0; }
+            25% { top: 150px; left: 50%; }
+            50% { top: 100px; left: 100%; }
+            75% { top: 50px; left: 50%; }
+            100% { top: 100px; left: 0; }
+        }
+        .vertical-move {
+            position: absolute;
+            left: 50%;
+            animation: moveVertical 4s linear infinite;
+        }
+        @keyframes moveVertical {
+            0% { top: 0; }
+            50% { top: 80%; }
+            100% { top: 0; }
+        }
+        @media (max-width: 600px) {
+            body {
+                background: pink;
+                color: blue;
+            }
+            .container {
+                width: 100%;
+                border: 5px solid red;
+                background: orange;
+            }
+            .pdf-container {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <marquee>!!! Wszystkiego Najlepszego Piotrek!!!</marquee>
+    <div class="container">
+        <h1 class="blinking-text">Tylko na to czekałeś!</h1>
+        <h2 class="rotating-text">Super ekstra hiper prezent!</h2>
+        <div class="pdf-container">
+            <iframe src="voucher.png"></iframe>
+        </div>
+    </div>
+    <marquee direction="right">!!! Do zobaczenia za rok!!!</marquee>
+    <img class="moving-image" src="https://media.giphy.com/media/l41lH2JniD8tVOhK4/giphy.gif" width="100" alt="Dancing GIF">
+    <img class="bouncing-image" src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif" width="100" alt="Bouncing GIF">
+    <img class="diagonal-move" src="https://media.giphy.com/media/fAnEC88LccN7a/giphy.gif" width="100" alt="Diagonal Moving GIF">
+    <img class="vertical-move" src="https://media.giphy.com/media/3o6nV38HVyFQgCwLlG/giphy.gif" width="100" alt="Vertical Moving GIF">
+</body>
+</html>
