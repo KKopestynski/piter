@@ -23,19 +23,21 @@
             background: cyan;
         }
         .pdf-container {
-            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             height: 500px;
             border: 10px groove lime;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Gift_box_icon.svg/512px-Gift_box_icon.svg.png') center/contain no-repeat;
+            background: cyan;
+            overflow: hidden;
         }
-        .pdf-container iframe {
+        .pdf-container img {
             width: 100%;
             height: 100%;
-            opacity: 0;
-            transition: opacity 0.5s;
+            object-fit: contain;
         }
-        .pdf-container:hover iframe {
+        .pdf-container:hover img {
             opacity: 1;
         }
         .blinking-text {
